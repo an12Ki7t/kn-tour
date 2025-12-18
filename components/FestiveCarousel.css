@@ -1,0 +1,175 @@
+.festive-wrapper {
+  width: 100%;
+  margin: 60px 0;
+}
+
+/* MAIN CONTAINER */
+.festive-carousel {
+  position: relative;
+  height: 520px;
+  
+  overflow: hidden;
+ 
+}
+
+/* BACKGROUND IMAGE FIX */
+.festive-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;        /* FULL IMAGE */
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.08);
+  animation: slowZoom 12s ease-in-out infinite;
+}
+
+/* DARK GRADIENT OVERLAY */
+.festive-overlay {
+  position: absolute;
+  inset: 0;
+  
+}
+
+/* CONTENT */
+.festive-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 80px;
+  max-width: 520px;
+}
+
+.festive-badge {
+  background: #8b5a2b;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.festive-content h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.festive-content p {
+  font-size: 16px;
+  margin-bottom: 22px;
+  opacity: 0.95;
+}
+
+.festive-btn {
+  background: #8b5a2b;
+  color: #fff;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.festive-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* SLIDE FADE */
+.fade-slide {
+  animation: fadeIn 1.2s ease;
+}
+
+/* CONTENT SLIDE-UP */
+.slide-up {
+  animation: slideUp 1.2s ease;
+}
+
+/* FLOATING EFFECTS */
+.floating {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.diyas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/diya.jpeg") repeat;
+  opacity: 0.12;
+  animation: floatUp 18s linear infinite;
+}
+
+.snow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/snowflake.avif") repeat;
+  opacity: 0.12;
+  animation: snowFall 22s linear infinite;
+}
+
+/* ANIMATIONS */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatUp {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes snowFall {
+  from {
+    background-position: 0 -100%;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .festive-carousel {
+    height: 340px;
+  }
+
+  .festive-content {
+    padding: 40px;
+  }
+
+  .festive-content h2 {
+    font-size: 26px;
+  }
+}

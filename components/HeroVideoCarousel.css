@@ -1,0 +1,161 @@
+.hero-video-carousel {
+  position: relative;
+  width: 100%;
+   height: 75vh;
+  overflow: hidden;
+}
+
+/* SLIDES */
+.video-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.video-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.video-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.video-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+}
+
+/* CONTENT */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  /* ADD THESE */
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.video-overlay h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+.video-overlay h3{
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.video-overlay p {
+ font-size: 18px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+
+/* SEARCH BAR */
+.hero-search {
+  display: flex;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 520px;
+  max-width: 90%;
+  margin-bottom: 18px;
+}
+
+.hero-search input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.hero-search button {
+  background: #f59e0b;
+  border: none;
+  padding: 0 26px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CATEGORY TABS */
+.hero-tabs {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-tabs span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-tabs span:hover {
+  background: #f59e0b;
+  color: #000;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 24px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll-indicator span::after {
+  content: "";
+  width: 4px;
+  height: 8px;
+  background: #fff;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; top: 8px; }
+  50% { opacity: 1; }
+  100% { opacity: 0; top: 20px; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .video-overlay h1 {
+    font-size: 34px;
+  }
+
+  .video-overlay p {
+    font-size: 16px;
+  }
+}
