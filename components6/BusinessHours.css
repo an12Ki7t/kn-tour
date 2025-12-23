@@ -1,0 +1,79 @@
+.business-hours-section {
+  padding: 70px 8%;
+  background: #ffffff;
+}
+
+/* Container */
+.hours-container {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Card */
+.hours-card {
+  background: #f9fafb;
+  padding: 36px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.hours-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.hours-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* Main text */
+.hours-card .main-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Sub text */
+.hours-card span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Highlight emergency support */
+.hours-card.highlight {
+  background: #fff5f5;
+  border: 1px solid rgba(255, 59, 59, 0.25);
+}
+
+.hours-card.highlight h3 {
+  color: #ff3b3b;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hours-container {
+    grid-template-columns: 1fr;
+  }
+}

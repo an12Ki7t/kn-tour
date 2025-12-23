@@ -1,0 +1,121 @@
+.quick-contact-section {
+  padding: 80px 8%;
+  background: #f9fafb;
+}
+
+/* Grid */
+.quick-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ALWAYS 4 in one row */
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* Card */
+.contact-card {
+    min-height: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 36px 24px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  flex: 1; 
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.contact-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.icon-box {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: rgba(255, 59, 59, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.icon-box svg {
+  width: 30px;
+  height: 30px;
+  color: #ff3b3b;
+}
+
+.contact-card:hover .icon-box {
+  background: #ff3b3b;
+}
+
+.contact-card:hover .icon-box svg {
+  color: #ffffff;
+}
+
+/* Text */
+.contact-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.contact-card span,
+.contact-card a {
+  font-size: 0.85rem;
+  color: #666;
+  text-decoration: none;
+}
+
+/* Highlight WhatsApp */
+
+
+.contact-card.highlight .icon-box {
+  background: rgba(37, 211, 102, 0.15);
+}
+
+.contact-card.highlight .icon-box svg {
+  color: #25d366;
+}
+
+.contact-card.highlight:hover .icon-box {
+  background: #25d366;
+}
+
+.contact-card.highlight:hover .icon-box svg {
+  color: #ffffff;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .quick-contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .quick-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

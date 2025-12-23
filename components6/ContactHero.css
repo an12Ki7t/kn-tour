@@ -1,0 +1,110 @@
+/* RESET any container issues */
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* Background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* FULL WIDTH + HEIGHT CENTER FIX */
+.hero-center-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+}
+
+/* ACTUAL CONTENT */
+.hero-center-content {
+  text-align: center;
+  color: #ffffff;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+/* Text */
+.hero-center-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+
+
+.hero-center-content p {
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+  opacity: 0.95;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Buttons style */
+.btn {
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border: none;
+}
+
+/* Primary */
+.primary-btn {
+  background: brown;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(255, 59, 59, 0.45);
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+  border: 2px solid #25d366;
+  color: #25d366;
+  background: transparent;
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  background: #25d366;
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-center-content h1 {
+    font-size: 2.4rem;
+  }
+}

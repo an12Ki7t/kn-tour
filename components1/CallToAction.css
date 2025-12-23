@@ -1,0 +1,108 @@
+.cta-section {
+  padding: 90px 50px;
+  background: linear-gradient(
+    120deg,
+    #fffaf5,
+    #ffffff
+  );
+}
+
+/* CONTAINER */
+.cta-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* TEXT */
+.cta-text h2 {
+  font-size: 2.6rem;
+  margin-bottom: 14px;
+}
+
+.cta-text p {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 520px;
+}
+
+/* FORM */
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cta-form input,
+.cta-form select {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-form input:focus,
+.cta-form select:focus {
+  border-color: brown;
+  box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.15);
+}
+
+/* BUTTON */
+.cta-btn {
+  margin-top: 10px;
+  padding: 16px;
+  background: brown;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 12px 25px rgba(160, 82, 45, 0.35);
+}
+/* SUCCESS STATE */
+.cta-form-wrapper {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-success {
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.success-icon {
+  font-size: 3.5rem;
+  color: #4caf50;
+  margin-bottom: 16px;
+}
+
+.cta-success h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.cta-success p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cta-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cta-text h2 {
+    font-size: 2.1rem;
+  }
+}

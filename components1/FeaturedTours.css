@@ -1,0 +1,153 @@
+.featured-tours {
+  padding: 70px 50px;
+  background: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Grid */
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.tour-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.tour-image {
+  position: relative;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hover Overlay */
+.hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.tour-image:hover .hover-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-overlay h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.hover-overlay ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.hover-overlay li {
+  margin-bottom: 6px;
+}
+
+.quick-btn {
+  background: brown;
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.quick-btn:hover {
+  background: brown;
+}
+
+/* Info Section */
+.tour-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Duration Badge (FIXED) */
+.duration-badge {
+  width: fit-content;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: brown;
+  background: #f7efe8;
+  border-radius: 20px;
+}
+
+/* Title */
+.tour-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;          /* FIX */
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: brown;
+  line-height: 1;               /* FIX */
+}
+
+.book-btn {
+  background: brown;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;          /* PREMIUM LOOK */
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: brown;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured-tours {
+    padding: 50px 20px;
+  }
+}

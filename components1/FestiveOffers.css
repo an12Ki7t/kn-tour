@@ -1,0 +1,60 @@
+.festive-offers {
+  padding: 60px 50px;
+}
+
+.offers-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 10px 20px; /* added horizontal padding */
+  scroll-padding: 20px; /* ensures smooth snapping if used */
+  scroll-behavior: smooth; /* optional smooth scroll */
+}
+
+.offer-card {
+  min-width: 310px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.offer-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.offer-image {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.offer-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+}
+
+.discount-badge {
+  background: #a0522d;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.countdown {
+  margin-top: 8px;
+  font-weight: 600;
+}

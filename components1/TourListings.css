@@ -1,0 +1,118 @@
+.tour-listings {
+  padding: 70px 60px;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.tour-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+  box-shadow: 0 22px 45px rgba(0,0,0,0.16);
+}
+
+.tour-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.tour-card:hover .tour-image {
+  transform: scale(1.06);
+}
+
+.tour-content {
+  padding: 18px;
+}
+
+.tagline {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.tour-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.highlights {
+  padding-left: 18px;
+  margin: 10px 0;
+}
+
+.highlights li {
+  font-size: 0.95rem;
+}
+
+.itinerary {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.tour-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.primary-btn {
+  background: brown;
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.compare-check {
+  font-size: 0.85rem;
+}
+
+/* COMPARE PANEL */
+.compare-panel {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.compare-card {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.close-btn {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  color: brown;
+  cursor: pointer;
+}

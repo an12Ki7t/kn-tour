@@ -1,0 +1,103 @@
+.closing-cta {
+  padding: 90px 20px;
+  background: #f6f4f1; /* Different from page background */
+}
+
+.cta-box {
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top accent bar */
+.cta-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+ 
+}
+
+.cta-box h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+.cta-description {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Primary button */
+.btn-primary {
+  background:brown;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(139, 94, 52, 0.35);
+}
+
+.btn-primary:hover {
+  background: brown;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(139, 94, 52, 0.5);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: transparent;
+  color: brown;
+  border: 2px solid #8b5e34;
+}
+
+.btn-secondary:hover {
+  background: brown;
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-box {
+    padding: 45px 25px;
+  }
+
+  .cta-box h2 {
+    font-size: 30px;
+  }
+
+  .cta-description {
+    font-size: 15.5px;
+  }
+}

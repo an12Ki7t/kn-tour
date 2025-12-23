@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/nLogo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
         <li><NavLink to="/tours" onClick={() => setMenuOpen(false)}>Tours</NavLink></li>
         <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About Us</NavLink></li>
         <li><NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink></li>
-        <li><NavLink to="/top-10-things" onClick={() => setMenuOpen(false)}>Top 10 Thing</NavLink></li>
+        
         <li><NavLink to="/blog" onClick={() => setMenuOpen(false)}>Blog</NavLink></li>
         <li><NavLink to="/career" onClick={() => setMenuOpen(false)}>Career</NavLink></li>
         <li><NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink></li>

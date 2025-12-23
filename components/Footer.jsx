@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/nLogo.png";
 import {
   FaFacebookF,
   FaInstagram,

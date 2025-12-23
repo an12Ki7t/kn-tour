@@ -1,0 +1,126 @@
+.leadership-team {
+  padding: 80px 0;
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.team-card {
+   background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;   /* IMPORTANT */
+  position: relative;
+}
+
+/* Brown top accent */
+.team-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: #8b5e34;
+  transition: width 0.3s ease;
+  z-index: 2;
+}
+
+.team-card:hover::before {
+  width: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image wrapper */
+.team-image {
+  
+  width: 100%;
+  height: 240px;       /* FIXED height */
+  position: relative;
+  overflow: hidden;
+  background-color: #ddd;  /* Prevent white flash while loading */
+}
+
+/* Image */
+.team-image img {
+   position: absolute;  /* KEY FIX */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* MUST */
+  object-position: center center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover zoom */
+.team-card:hover .team-image img {
+   transform: scale(1.12);
+}
+
+/* Text */
+.team-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 18px 0 4px;
+  padding: 0 18px;
+}
+
+.team-role {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #8b5e34;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.6;
+  padding: 0 18px 22px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .team-image {
+    height: 180px;
+  }
+}

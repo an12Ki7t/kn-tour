@@ -1,0 +1,120 @@
+.tour-categories {
+  padding: 80px 50px;
+  background: #fafafa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+/* CATEGORY GRID */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.category-card {
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.category-image {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2)
+  );
+  padding: 25px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.category-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ffd7b5;
+}
+
+.category-overlay h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.explore-text {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* RECOMMENDED GRID */
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.recommend-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.recommend-card:hover {
+  box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+}
+
+.recommend-tag {
+  display: inline-block;
+  background: brown;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.recommend-image {
+  height: 160px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  margin: 14px 0;
+}
+
+.recommend-card h4 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.recommend-btn {
+  width: 100%;
+  background: brown;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.recommend-btn:hover {
+  background: brown;
+}

@@ -1,0 +1,117 @@
+.branch-section {
+  padding: 90px 8%;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.branch-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Tabs */
+.branch-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.branch-tabs button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.35s ease;
+}
+
+.branch-tabs button:hover {
+  border-color: brown;
+  color: brown;
+}
+
+.branch-tabs button.active {
+  background: brown;
+  color: #ffffff;
+  border-color: brown;
+}
+
+/* Content */
+.branch-content-wrapper {
+  position: relative;
+  min-height: 380px;
+}
+
+.branch-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Card */
+.branch-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+}
+
+.branch-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.branch-card .city {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.branch-card .address {
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.branch-card .phone {
+  font-weight: 600;
+  color: brown;
+}
+
+/* Map */
+.branch-map iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  border: none;
+  transition: transform 0.4s ease;
+}
+
+.branch-map iframe:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .branch-content {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-card {
+    text-align: center;
+  }
+}
