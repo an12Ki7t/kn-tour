@@ -1,0 +1,78 @@
+.perks-section {
+  padding: 90px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.section-subheading {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.perk-card {
+  background: #f9fafc;
+  padding: 40px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+}
+
+.perk-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+}
+
+.perk-icon {
+  font-size: 3rem;
+  color: brown;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.perk-card:hover .perk-icon {
+  transform: rotate(8deg) scale(1.2);
+  color:brown;
+}
+
+.perk-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.perk-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Animation delay */
+.perk-card:nth-child(1) { animation-delay: 0.2s; }
+.perk-card:nth-child(2) { animation-delay: 0.4s; }
+.perk-card:nth-child(3) { animation-delay: 0.6s; }
+.perk-card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

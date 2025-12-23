@@ -1,0 +1,74 @@
+/* HeroSection.css */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.hero-section:hover {
+  transform: scale(1.02); /* subtle zoom on hover */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* blur effect */
+  background-color: rgba(0, 0, 0, 0.3); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+  
+
+.hero-subheading {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-cta {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: brown;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: brown;
+  transform: scale(1.05);
+}
